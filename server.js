@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth.routes');
 const employerRoutes = require('./routes/employer.routes');
 const managerRoutes = require('./routes/manager.routes');
+const userRoutes = require('./routes/auth.routes');
 
 // Load environment variables
 dotenv.config();

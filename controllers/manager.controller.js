@@ -2,9 +2,9 @@ const Lead = require('../models/lead.model');
 
 // Get leads assigned to this manager
 const getManagerLeads = async (req, res) => {
+  try {
   const { userId } = req.user; // Assuming userId is attached to req.user after authentication
 
-  try {
     const leads = await Lead.find({ managerId: userId });
     res.json(leads);
   } catch (err) {
